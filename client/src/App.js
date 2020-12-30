@@ -1,9 +1,10 @@
 import './App.css';
+import ImageUploader from './components/ImageUploader';
 
 function App() {
   return (
     <div className='App'>
-      <h1>Hello</h1>
+      <ImageUploader />
     </div>
   );
 }
