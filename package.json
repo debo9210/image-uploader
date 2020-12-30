@@ -1,0 +1,27 @@
+{
+  "name": "image-uploader",
+  "version": "1.0.0",
+  "description": "a simple image uploader app",
+  "main": "server.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debo9210/image-uploader.git"
+  },
+  "author": "debo9210",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/debo9210/image-uploader/issues"
+  },
+  "homepage": "https://github.com/debo9210/image-uploader#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
