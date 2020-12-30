@@ -16,7 +16,7 @@ mongoose
   .catch((err) => console.log(err));
 
 // USE Routes
-app.get('/', (req, res) => res.send('Welcome here!!!'));
+// app.get('/', (req, res) => res.send('Welcome here!!!'));
 app.use('/api/images', imageUpload);
 
 //server static assets if in production
