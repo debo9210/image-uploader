@@ -324,3 +324,18 @@ input[type='file'] {
   color: #ffffff;
   padding: 10px 20px;
 }
+
+/* footer styles */
+.Footer {
+  /* border: 1px solid blue; */
+  margin: 40px 0 -30px 0;
+}
+
+.FooterText {
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #a9a9a9;
+  margin: 0;
+}
