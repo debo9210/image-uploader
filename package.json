@@ -9,7 +9,7 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONGIG_PRODUCTION=false npm install --prefix image-uploader && npm run build --prefix image-uploader",
+    "heroku-postbuild": "NPM_CONGIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
