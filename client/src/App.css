@@ -1,38 +1,326 @@
 .App {
+  /* text-align: center; */
+  /* border: 1px solid red; */
+  width: 50%;
+  margin: 40px auto;
+  /* height: 100vh; */
+}
+
+::placeholder {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 12px;
+  /* identical to box height */
+  letter-spacing: -0.035em;
+  color: #928a8a;
+}
+
+/* image upload styles */
+.GeneralContainer {
+  /* width: 402px; */
+  width: 80%;
+  /* height: 469px; */
+  height: 100%;
+  background: #ffffff;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+}
+
+.HeadingStatus {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+  text-align: center;
+  padding: 0px 0 0 0;
+  margin-bottom: 0;
+}
+
+.FileType {
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.035em;
+  color: #828282;
+}
+
+.ImageName {
+  outline: none;
+  border: 1px solid #828282;
+  background: #f6f8fb;
+  border-radius: 5px;
+  width: 100%;
+  height: 30px;
+  /* margin-top: 20px; */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  /* identical to box height */
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+}
+
+.ImageNameContainer {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid blue; */
+  width: 85%;
+  margin: 0 auto;
+}
+
+.Required {
+  /* display: block; */
+  font-style: italic;
+  color: #bdbdbd;
+}
+
+.DropContainer {
+  /* width: 338px; */
+  width: 85%;
+  height: 258.9px;
+  /* height: 100%; */
+  background: #f6f8fb;
+  border: 2px dashed #97bef4;
+  box-sizing: border-box;
+  border-radius: 12px;
+  margin: 20px auto 0 auto;
+}
+
+.Highlight {
+  border: 2px dashed tomato;
+}
+
+.ImgLogoContainer div {
+  display: flex;
+  justify-content: center;
+  margin: 35px 0 40px 0;
+}
+
+.ImgLogo {
+  width: 134.13px;
+  height: 108.24px;
+}
+
+.DragInstruction {
+  margin-bottom: 50px;
+}
+
+.Or {
+  margin-top: 20px;
+}
+
+.DragInstruction,
+.Or {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.035em;
+  color: #bdbdbd;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.BtnContainer {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 10px 0 30px 0;
+  /* border: 1px solid orange; */
+  width: 50%;
+  margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+.FileBtn {
+  color: #fff;
+  background: #2f80ed;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 20px;
+  font-family: 'Noto Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.035em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+input[type='file'] {
+  display: none;
+}
+
+/* Uploading styles */
+.UploadingContainer {
+  /* border: 1px solid peru; */
+  margin-top: 200px;
+}
+
+.LoadingHeading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+  margin: 40px 0 30px 40px;
+}
+
+.LoadingBar {
+  background: #f2f2f2;
+  border-radius: 8px;
+  /* (height of inner div) / 2 + padding */
+  padding: 3px;
+  margin: 0 0 50px 40px;
+  width: 80%;
+}
+
+.LoadingBar > div {
+  background: #2f80ed;
+  border-radius: 8px;
+  width: 30%;
+  /* Adjust with JavaScript */
+  height: 10px;
+  animation-name: run;
+  animation-duration: 0.8s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes run {
+  0% {
+    transform: translateX(0%);
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateX(230%);
   }
+}
+
+/* upload success styles */
+.IconContainer {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid blue; */
+  width: 20%;
+  margin: 25px auto 0 auto;
+}
+
+.CheckIcon {
+  color: #219653;
+  font-size: 50px;
+}
+
+.SuccessHeading {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+  /* border: 1px solid red; */
+  margin-top: 5px;
+}
+
+.ImageContainer {
+  width: 85%;
+  /* outline: 1px solid green; */
+  margin: 30px auto 0 auto;
+  border-radius: 12px;
+}
+
+.ImageContainer img {
+  width: 100%;
+  height: 285.9px;
+  border-radius: 12px;
+}
+
+.InputGroup {
+  display: flex;
+  width: 85%;
+  height: 43px;
+  background: #f6f8fb;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 20px auto 10px auto;
+}
+
+.CopyLink {
+  outline: none;
+  border: none;
+  background: #f6f8fb;
+  width: 75%;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  /* identical to box height */
+  letter-spacing: -0.035em;
+  color: #4f4f4f;
+}
+
+.CopyLinkBtn {
+  width: 25%;
+  background: #2f80ed;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  margin: 1px 1px 1px 0;
+}
+
+.Copied {
+  display: none;
+  text-align: center;
+  border: 1px solid #000;
+  width: 20%;
+  margin: 5px auto 10px auto;
+  border-radius: 5px;
+  background: #000;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+/* .visible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+} */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.Copied p {
+  margin: 0;
+  padding: 3px 0;
+  font-size: 14px;
+  color: rgb(243, 239, 239);
+}
+
+.UploadAgainContainer {
+  width: 85%;
+  margin: 0 auto 30px auto;
+}
+
+.UploadAgainBtn {
+  background: #2f80ed;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: -0.035em;
+  color: #ffffff;
+  padding: 10px 20px;
 }
