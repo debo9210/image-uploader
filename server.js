@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 
+const imageUpload = require('./routes/api/imageUpload');
+
 const app = express();
 
 // DB config
@@ -15,6 +17,7 @@ mongoose
 
 // USE Routes
 app.get('/', (req, res) => res.send('Welcome here!!!'));
+app.use('/api/images', imageUpload);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server running @ port ${port}`));
